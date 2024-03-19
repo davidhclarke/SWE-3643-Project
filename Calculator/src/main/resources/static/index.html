@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        div.container {
+            width: 100%;
+            overflow: auto;
+        }
+        div.container div {
+            width: 15%;
+            float: left;
+        }
+        .text_input {
+            height: 25px;
+            width: 100px;
+            border-radius: 5px;
+            border-color: black;
+            background-color: #d9e7e7;
+            color: #000000;
+            font-family: Verdana, sans-serif;
+            cursor: pointer;
+        }
+        ::placeholder {
+            color: #565656;
+        }
+        .button {
+            height: 25px;
+            width: 80px;
+            border-radius: 5px;
+            border: none;
+            background-color: #d9e7e7;
+            color: #000000;
+            font-family: Verdana, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<label for="value1"></label>
+<input type="text" class="text_input" id="value1" placeholder="Input A">&nbsp;
+<label for="value2"></label>
+<input type="text" class="text_input" id="value2" placeholder="Input B"><br><br><br>
+
+<div class="container">
+    <div>
+        <input type="button" class="button" value="A + B"><br><br>
+        <input type="button" class="button" value="A - B"><br><br>
+        <input type="button" class="button" value="A * B"><br><br>
+        <input type="button" class="button" value="A / B"><br><br>
+        <input type="button" class="button" value="A == B"><br><br>
+        <input type="button" class="button" value="A ^ B"><br><br>
+        <input type="button" class="button" value="A log B"><br><br>
+        <input type="button" class="button" value="A root B"><br><br>
+    </div>
+
+    <div>
+        <input type="button" class="button" value="A!"><br><br>
+        <input type="button" class="button" value="sin(A)"><br><br>
+        <input type="button" class="button" value="cos(A)"><br><br>
+        <input type="button" class="button" value="tan(A)"><br><br>
+        <input type="button" class="button" value="1/A"><br><br>
+    </div>
+</div>
+
+</body>
+
+</html>
