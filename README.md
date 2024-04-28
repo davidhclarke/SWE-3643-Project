@@ -17,15 +17,9 @@ This project contains a web-based floating point calculator.
 
 ## Architecture
 
+
 ## Environment
-To prepare your environment to execute this application:
 
- 1. [Install the latest Java runtime for your system.](https://www.java.com/en/download/manual.jsp)
- 2. 
-
-To configure Playwright for end-to-end testing:
-
- 1. List item
 
 ## Executing the Web Application
 
@@ -40,4 +34,4 @@ To configure Playwright for end-to-end testing:
 
 
 ## Final Video Presentation
-A video demonstrating this project is available [here.]()
+A video demonstrating this project is available [here.](https://youtu.be/h_GFd4DnFpc)
