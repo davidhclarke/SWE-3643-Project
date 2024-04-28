@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<style>
+
+    html {
+        font-family: sans-serif;
+    }
+    body {
+        height: 100%;
+        background-color: #eef1f5;
+    }
+    button {
+        width:100%;
+        height: 25px;
+        background-color: #EBEBEB;
+        border-radius: 3px;
+        border-width: 1px;
+        margin-top: 5px;
+    }
+    input {
+        text-align: right;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .centered {
+        width: auto;
+        height: 75%;
+        padding: 20px;
+    }
+    .table-container {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+</style>
+<body>
+
+<div class="container">
+    <div class="centered">
+        <form action="#" th:action="@{/}" th:object="${calculator}" method="post">
+            <table class="table-container">
+                <tr>
+                    <td><h1>Calculator</h1></td>
+                    <td><button type="button" style="margin-top: 0" id="clearResults" onclick="resetForm()">Clear</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: #FFECD7"><p id="result" style="text-align: center; background-color: #FFECD7" th:text="${result}">Enter value(s) below and select an operation.</p></td>
+                </tr>
+                <tr>
+                    <td><output></output></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputA">Input A</label><br>
+                        <input type="text" id="inputA" name="inputA" value="0" th:name="operand1">
+                    </td>
+                    <td>
+                        <label for="inputB">Input B</label><br>
+                        <input type="text" id="inputB" name="inputB" value="0" th:name="operand2">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EBEBEB; padding-left: 10px"><p>A and B</p></td>
+                    <td style="background-color: #EBEBEB; padding-left: 10px"><p>A only</p></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="add" id="operationAdd" th:name="operation">A + B</button></td>
+                    <td><button type="submit" value="factorial" id="operationFactorial" th:name="operation">A!</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="subtract" id="operationSubtract" th:name="operation">A - B</button></td>
+                    <td><button type="submit" value="sine" id="operationSine" th:name="operation">sin A</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="multiply" id="operationMultiply" th:name="operation">A * B</button></td>
+                    <td><button type="submit" value="cosine" id="operationCosine" th:name="operation">cos A</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="divide" id="operationDivide" th:name="operation">A / B</button></td>
+                    <td><button type="submit" value="tangent" th:name="operation">tan A</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="equals" id="operationEquals" th:name="operation">A == B</button></td>
+                    <td><button type="submit" value="reciprocal" id="operationReciprocal" th:name="operation">1 / A</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="power" id="operationPower" th:name="operation">A ^ B</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" value="logN" id="operationLogN" th:name="operation">A log B</button></td>
+
+                </tr>
+                <tr>
+                    <td><button type="submit" value="nthRoot" id="operationNthRoot" th:name="operation">A root B</button></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</div>
+
+<script>
+    function resetForm() {
+        document.getElementById('result').textContent = 'Enter value(s) below and select an operation.';
+        document.getElementById('inputA').value = 0;
+        document.getElementById('inputB').value = 0;
+    }
+    var inputA = document.getElementById('inputA');
+    var inputB = document.getElementById('inputB');
+    inputA.addEventListener('click', function () {
+        inputA.setSelectionRange(0, inputA.value.length);
+    });
+    inputB.addEventListener('click', function () {
+        inputB.setSelectionRange(0, inputB.value.length);
+    });
+</script>
+
+</body>
+</html>
