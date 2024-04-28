@@ -40,4 +40,4 @@ To configure Playwright for end-to-end testing:
 
 
 ## Final Video Presentation
-A video presentation explaining this project is available [here.]()
+A video demonstrating this project is available [here.]()
