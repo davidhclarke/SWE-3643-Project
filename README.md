@@ -34,4 +34,4 @@ This project contains a web-based floating point calculator.
 
 
 ## Final Video Presentation
-A video demonstrating this project is available [here.](https://youtu.be/h_GFd4DnFpc)
+A video demonstrating this project is available [here.](https://youtu.be/6EQ0nmU0sXk)
